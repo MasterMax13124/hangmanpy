@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 import random
 
 def findOccurrences(s, ch): #from https://stackoverflow.com/questions/13009675/find-all-the-occurrences-of-a-character-in-a-string
     return [i for i, letter in enumerate(s) if letter == ch]
 
-if __name__ == "__main__":
+def main():
     wordlist = ""
     with open ("wordlist.txt", "r") as myfile:
         wordlist=myfile.readlines()
@@ -57,3 +58,4 @@ if __name__ == "__main__":
             if hitpoints <= 0:
                 gamerunning = False
                 print("Sorry, you lose. The word was: ", word)
+main()
